@@ -35,7 +35,17 @@ const projects = [
     stack: ["Spring Boot", "React", "MySQL", "REST API"],
     color: "#7B2FBE",
     glow: "#7B2FBE",
-    icon: "🛒",
+    icon: "🪐",
+    dashboard: {
+      title: "Store Command Deck",
+      metrics: [
+        ["Today's Orders", "42"],
+        ["Revenue Orbit", "Rs. 86K"],
+        ["Low Stock Moons", "7"],
+      ],
+      flow: ["Customer lands", "Product selected", "Payment captured", "Inventory updated"],
+      trust: "A client can see sales, orders, stock alerts, and customer activity from one control room.",
+    },
   },
   {
     name: "Restaurant Orbit",
@@ -43,7 +53,17 @@ const projects = [
     stack: ["Spring Boot", "React", "WebSocket", "PostgreSQL"],
     color: "#00D4FF",
     glow: "#00D4FF",
-    icon: "🍽️",
+    icon: "☄️",
+    dashboard: {
+      title: "Kitchen Orbit Live",
+      metrics: [
+        ["Active Tables", "18"],
+        ["Kitchen Queue", "11"],
+        ["Avg Prep Time", "14m"],
+      ],
+      flow: ["QR menu scan", "Order enters orbit", "Kitchen accepts", "Owner tracks live"],
+      trust: "Restaurants can reduce phone chaos and track every table, order, and kitchen status live.",
+    },
   },
   {
     name: "Salon Nebula",
@@ -51,7 +71,17 @@ const projects = [
     stack: ["React", "REST API", "Spring Boot", "MySQL"],
     color: "#00FF88",
     glow: "#00FF88",
-    icon: "✂️",
+    icon: "🌙",
+    dashboard: {
+      title: "Appointment Moon Base",
+      metrics: [
+        ["Bookings Today", "26"],
+        ["No-show Risk", "3"],
+        ["Staff Load", "82%"],
+      ],
+      flow: ["Client chooses service", "Slot reserved", "Reminder signal sent", "Visit completed"],
+      trust: "A salon can automate appointments, reminders, staff calendars, and repeat customer follow-ups.",
+    },
   },
   {
     name: "Business Dashboard Pulsar",
@@ -59,15 +89,57 @@ const projects = [
     stack: ["React", "Chart.js", "Spring Boot", "REST API"],
     color: "#FF8C42",
     glow: "#FF8C42",
-    icon: "📊",
+    icon: "☀️",
+    dashboard: {
+      title: "Owner Solar Console",
+      metrics: [
+        ["Monthly Growth", "+28%"],
+        ["Hot Products", "9"],
+        ["Pending Tasks", "14"],
+      ],
+      flow: ["Data collected", "Reports generated", "Alerts triggered", "Owner decides faster"],
+      trust: "Owners stop guessing and start seeing the business through clear numbers and alerts.",
+    },
   },
 ];
 
 const services = [
-  { icon: "🌐", title: "Business Websites", desc: "Professional, fast-loading websites that represent your brand and attract customers 24/7.", price: "Starting at ₹8,000" },
-  { icon: "🛒", title: "E-Commerce Stores", desc: "Sell your products online with secure payments, inventory, and order tracking built in.", price: "Starting at ₹15,000" },
-  { icon: "📱", title: "Web Applications", desc: "Custom apps — booking systems, dashboards, portals — tailored to your business workflow.", price: "Starting at ₹20,000" },
-  { icon: "🔗", title: "REST API Development", desc: "Powerful backends and APIs that connect your apps, automate tasks, and scale with you.", price: "Starting at ₹12,000" },
+  {
+    icon: "🪐",
+    title: "Business Websites",
+    desc: "Professional, fast-loading websites that represent your brand and attract customers 24/7.",
+    price: "Starting at ₹8,000",
+    demoTitle: "Lead Capture Orbit",
+    automation: ["Visitor lands on service page", "Inquiry form captures details", "WhatsApp signal opens instantly", "Owner gets a ready lead brief"],
+    demoMetrics: [["Lead Score", "86%"], ["Response Time", "2m"], ["Follow-up Moons", "3"]],
+  },
+  {
+    icon: "☄️",
+    title: "E-Commerce Stores",
+    desc: "Sell your products online with secure payments, inventory, and order tracking built in.",
+    price: "Starting at ₹15,000",
+    demoTitle: "Order Comet Flow",
+    automation: ["Customer adds product", "Payment sun confirms order", "Inventory comet updates stock", "Owner dashboard shows delivery status"],
+    demoMetrics: [["Cart Value", "Rs. 2,480"], ["Stock Sync", "Live"], ["Orders", "42"]],
+  },
+  {
+    icon: "🌙",
+    title: "Web Applications",
+    desc: "Custom apps — booking systems, dashboards, portals — tailored to your business workflow.",
+    price: "Starting at ₹20,000",
+    demoTitle: "Automation Moon Base",
+    automation: ["Customer books a slot", "Staff calendar updates", "Reminder satellite sends alert", "Admin sees daily schedule"],
+    demoMetrics: [["Bookings", "26"], ["Reminders", "Auto"], ["No-shows", "-41%"]],
+  },
+  {
+    icon: "🛰️",
+    title: "REST API Development",
+    desc: "Powerful backends and APIs that connect your apps, automate tasks, and scale with you.",
+    price: "Starting at ₹12,000",
+    demoTitle: "Signal Satellite API",
+    automation: ["Website sends request", "API validates data", "Database moon stores it", "Dashboard receives live signal"],
+    demoMetrics: [["Latency", "120ms"], ["Uptime", "99.9%"], ["Signals", "Live"]],
+  },
 ];
 
 const chatbotIntents = [
@@ -159,14 +231,144 @@ const getChatbotResponse = (text) => {
 };
 
 const techStack = [
-  { name: "Spring Boot", icon: "🍃", category: "Backend", color: "#6DB33F" },
-  { name: "React", icon: "⚛️", category: "Frontend", color: "#00D4FF" },
-  { name: "REST API", icon: "🔗", category: "Architecture", color: "#FF8C42" },
-  { name: "MySQL", icon: "🐬", category: "Database", color: "#00758F" },
-  { name: "JavaScript", icon: "⚡", category: "Language", color: "#F7DF1E" },
-  { name: "Java", icon: "☕", category: "Language", color: "#ED8B00" },
-  { name: "Git", icon: "🔀", category: "DevOps", color: "#F05032" },
-  { name: "HTML/CSS", icon: "🎨", category: "Frontend", color: "#E34F26" },
+  { name: "Spring Boot", icon: "🪐", category: "Backend", color: "#6DB33F" },
+  { name: "React", icon: "☄️", category: "Frontend", color: "#00D4FF" },
+  { name: "REST API", icon: "🛰️", category: "Architecture", color: "#FF8C42" },
+  { name: "MySQL", icon: "🌑", category: "Database", color: "#00758F" },
+  { name: "JavaScript", icon: "☀️", category: "Language", color: "#F7DF1E" },
+  { name: "Java", icon: "🌕", category: "Language", color: "#ED8B00" },
+  { name: "Git", icon: "🌀", category: "DevOps", color: "#F05032" },
+  { name: "HTML/CSS", icon: "🌈", category: "Frontend", color: "#E34F26" },
+];
+
+const businessPlanets = [
+  {
+    id: "restaurant",
+    icon: "☄️",
+    name: "Restaurant Comet",
+    business: "Restaurant / Cafe",
+    color: "#FF8C42",
+    base: 18000,
+    weeks: 3,
+    mission: "Digital menu, order flow, table signals, kitchen dashboard, and WhatsApp order capture.",
+    result: "Fewer missed orders, faster service, and a digital menu customers can share instantly.",
+  },
+  {
+    id: "salon",
+    icon: "🌙",
+    name: "Salon Moon",
+    business: "Salon / Spa",
+    color: "#00FF88",
+    base: 16000,
+    weeks: 3,
+    mission: "Service catalog, appointment booking, staff calendar, reminders, and customer records.",
+    result: "More repeat bookings, fewer no-shows, and a premium brand feel before customers arrive.",
+  },
+  {
+    id: "shop",
+    icon: "🪐",
+    name: "Retail Saturn",
+    business: "Shop / Retail",
+    color: "#7B2FBE",
+    base: 22000,
+    weeks: 4,
+    mission: "Product catalog, inventory signals, online orders, offers, and customer inquiry tracking.",
+    result: "Your shop becomes discoverable beyond the street, with orders and leads coming online.",
+  },
+  {
+    id: "clinic",
+    icon: "🌕",
+    name: "Clinic Luna",
+    business: "Clinic / Consultant",
+    color: "#00D4FF",
+    base: 20000,
+    weeks: 4,
+    mission: "Appointment requests, service pages, patient FAQ, location trust, and follow-up workflows.",
+    result: "Patients understand your services faster and book with more confidence.",
+  },
+  {
+    id: "gym",
+    icon: "🌑",
+    name: "Gym Eclipse",
+    business: "Gym / Fitness Studio",
+    color: "#F7DF1E",
+    base: 19000,
+    weeks: 3,
+    mission: "Membership plans, trial booking, trainer schedule, progress tracking, and renewal reminders.",
+    result: "More trials convert into members, and owners see renewals before they are missed.",
+  },
+  {
+    id: "coaching",
+    icon: "🌌",
+    name: "Coaching Nebula",
+    business: "Coaching / Institute",
+    color: "#B56CFF",
+    base: 21000,
+    weeks: 4,
+    mission: "Course pages, admission leads, batch schedules, fee reminders, and student inquiry tracking.",
+    result: "Parents and students understand courses faster, while admissions become trackable.",
+  },
+  {
+    id: "realestate",
+    icon: "🛰️",
+    name: "Property Satellite",
+    business: "Real Estate / Broker",
+    color: "#00B8A9",
+    base: 24000,
+    weeks: 4,
+    mission: "Property listings, lead forms, location maps, visit scheduling, and buyer follow-ups.",
+    result: "Listings become searchable, shareable, and connected to a follow-up system.",
+  },
+  {
+    id: "garage",
+    icon: "☄️",
+    name: "Garage Comet",
+    business: "Garage / Service Center",
+    color: "#FF5C8A",
+    base: 18000,
+    weeks: 3,
+    mission: "Service booking, job cards, parts tracking, reminders, and customer service history.",
+    result: "Work moves from manual notes to a service flow the owner can track clearly.",
+  },
+];
+
+const orbitFeatures = [
+  { id: "booking", icon: "🌙", name: "Booking Moon", desc: "Appointment or table booking", price: 5000, weeks: 1 },
+  { id: "payments", icon: "☀️", name: "Payment Sun", desc: "Online payment collection", price: 7000, weeks: 1 },
+  { id: "dashboard", icon: "🪐", name: "Dashboard Planet", desc: "Admin control center", price: 9000, weeks: 2 },
+  { id: "whatsapp", icon: "🛰️", name: "Signal Satellite", desc: "WhatsApp lead/order flow", price: 4000, weeks: 1 },
+  { id: "inventory", icon: "☄️", name: "Inventory Comet", desc: "Stock and product tracking", price: 8000, weeks: 2 },
+  { id: "analytics", icon: "🌌", name: "Insight Nebula", desc: "Reports and business analytics", price: 6000, weeks: 1 },
+];
+
+const marketShifts = [
+  { before: "Customers call again and again", after: "Booking moon captures requests automatically", icon: "🌙" },
+  { before: "Orders are written on paper", after: "Comet order flow reaches kitchen or owner instantly", icon: "☄️" },
+  { before: "Owner guesses what is selling", after: "Insight nebula shows revenue and demand patterns", icon: "🌌" },
+  { before: "Business depends only on walk-ins", after: "Satellite signals bring leads from Google and WhatsApp", icon: "🛰️" },
+];
+
+const discoveryQuestions = [
+  {
+    key: "businessType",
+    question: "What business are we launching into orbit?",
+    options: ["Restaurant", "Salon", "Retail Shop", "Clinic", "Gym", "Coaching", "Real Estate", "Garage", "Other"],
+  },
+  {
+    key: "mainProblem",
+    question: "What is your biggest manual problem today?",
+    options: ["Missed leads", "Manual booking", "Stock confusion", "No online orders", "No dashboard", "Slow follow-up", "Other"],
+  },
+  {
+    key: "priority",
+    question: "Which automation should launch first?",
+    options: ["Website lead system", "Booking moon", "Payment sun", "Admin dashboard", "WhatsApp satellite", "Analytics nebula", "Other"],
+  },
+  {
+    key: "timeline",
+    question: "When do you want the first version live?",
+    options: ["1-2 weeks", "3-4 weeks", "Next month", "Planning stage", "Other"],
+  },
 ];
 
 function StarField() {
@@ -239,7 +441,7 @@ function FloatingPlanet({ size, color, style, rings = false }) {
 }
 
 function NavBar({ scrollY }) {
-  const nav = ["Home", "About", "Services", "Projects", "Tech Stack", "Contact"];
+  const nav = ["Home", "About", "Services", "Orbit Planner", "Projects", "Discovery", "Contact"];
   const scrollTo = (id) => {
     document.getElementById(id.toLowerCase().replace(" ", "-"))?.scrollIntoView({ behavior: "smooth" });
   };
@@ -317,7 +519,7 @@ function NavBar({ scrollY }) {
 function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { type: "bot", text: "Hi! 👋 I'm ParaTech's AI Assistant. Ask me anything about services, pricing, or how we can help!" }
+    { type: "bot", text: "Mission control online. Choose a business planet or ask about services, pricing, timelines, and launch features." }
   ]);
   const [input, setInput] = useState("");
 
@@ -366,9 +568,9 @@ function Chatbot() {
           e.currentTarget.style.transform = "scale(1)";
           e.currentTarget.style.boxShadow = "0 4px 20px rgba(123, 47, 190, 0.5)";
         }}
-        title="Chat with AI"
+        title="Open mission control"
       >
-        💬
+        🛰️
       </button>
 
       {/* Chat Window */}
@@ -400,8 +602,8 @@ function Chatbot() {
             alignItems: "center",
           }}>
             <div>
-              <h3 style={{ margin: 0, fontSize: "1rem", color: "#E8F4FD" }}>ParaTech AI</h3>
-              <p style={{ margin: 0, fontSize: "0.75rem", color: "#9BAAB8" }}>Always here to help!</p>
+              <h3 style={{ margin: 0, fontSize: "1rem", color: "#E8F4FD" }}>Mission Control</h3>
+              <p style={{ margin: 0, fontSize: "0.75rem", color: "#9BAAB8" }}>Satellite support online</p>
             </div>
             <button
               onClick={() => setIsOpen(false)}
@@ -467,8 +669,8 @@ function Chatbot() {
               type="text"
               value={input}
               onChange={e => setInput(e.target.value)}
-              onKeyPress={e => e.key === "Enter" && handleSendMessage()}
-              placeholder="Ask me..."
+              onKeyDown={e => e.key === "Enter" && handleSendMessage()}
+              placeholder="Send a signal..."
               style={{
                 flex: 1,
                 background: "rgba(0, 0, 0, 0.3)",
@@ -493,7 +695,7 @@ function Chatbot() {
                 fontSize: "1rem",
               }}
             >
-              📤
+              ☄️
             </button>
           </div>
         </div>
@@ -521,6 +723,18 @@ export default function Portfolio() {
   const [formData, setFormData] = useState({ name: "", email: "", project: "", message: "" });
   const [sent, setSent] = useState(false);
   const [activeTab, setActiveTab] = useState("All");
+  const [selectedBusinessId, setSelectedBusinessId] = useState(businessPlanets[0].id);
+  const [selectedFeatureIds, setSelectedFeatureIds] = useState(["booking", "whatsapp", "dashboard"]);
+  const [selectedServiceIndex, setSelectedServiceIndex] = useState(0);
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+  const [missionBriefReady, setMissionBriefReady] = useState(false);
+  const [discoveryAnswers, setDiscoveryAnswers] = useState({
+    businessType: "Restaurant",
+    mainProblem: "Manual booking",
+    priority: "WhatsApp satellite",
+    timeline: "3-4 weeks",
+  });
+  const [discoveryOtherAnswers, setDiscoveryOtherAnswers] = useState({});
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -587,6 +801,44 @@ export default function Portfolio() {
 
   const techCategories = ["All", ...new Set(techStack.map(t => t.category))];
   const filteredTech = activeTab === "All" ? techStack : techStack.filter(t => t.category === activeTab);
+  const selectedBusiness = businessPlanets.find((planet) => planet.id === selectedBusinessId) ?? businessPlanets[0];
+  const selectedFeatures = orbitFeatures.filter((feature) => selectedFeatureIds.includes(feature.id));
+  const selectedService = services[selectedServiceIndex];
+  const selectedProject = projects[selectedProjectIndex];
+  const getDiscoveryAnswer = (key) =>
+    discoveryAnswers[key] === "Other"
+      ? discoveryOtherAnswers[key]?.trim()
+      : discoveryAnswers[key];
+  const resolvedDiscoveryAnswers = {
+    businessType: getDiscoveryAnswer("businessType") || "Custom business",
+    mainProblem: getDiscoveryAnswer("mainProblem") || "custom business problem",
+    priority: getDiscoveryAnswer("priority") || "custom automation",
+    timeline: getDiscoveryAnswer("timeline") || "custom timeline",
+  };
+  const launchCost = selectedBusiness.base + selectedFeatures.reduce((total, feature) => total + feature.price, 0);
+  const launchWeeks = selectedBusiness.weeks + selectedFeatures.reduce((total, feature) => total + feature.weeks, 0);
+  const formatPrice = (value) => `Rs. ${value.toLocaleString("en-IN")}`;
+  const discoveryScore = discoveryQuestions.filter((question) => getDiscoveryAnswer(question.key)).length * 25;
+  const missionBriefText = `${resolvedDiscoveryAnswers.businessType} needs help with ${resolvedDiscoveryAnswers.mainProblem.toLowerCase()}. First launch should focus on ${resolvedDiscoveryAnswers.priority.toLowerCase()}, with a target timeline of ${resolvedDiscoveryAnswers.timeline.toLowerCase()}.`;
+  const whatsappMissionText = `Hi ParaTech, my mission brief: ${resolvedDiscoveryAnswers.businessType} business, problem: ${resolvedDiscoveryAnswers.mainProblem}, first launch: ${resolvedDiscoveryAnswers.priority}, timeline: ${resolvedDiscoveryAnswers.timeline}.`;
+
+  const toggleFeature = (featureId) => {
+    setSelectedFeatureIds((current) =>
+      current.includes(featureId)
+        ? current.filter((id) => id !== featureId)
+        : [...current, featureId]
+    );
+  };
+
+  const answerDiscovery = (key, value) => {
+    setMissionBriefReady(false);
+    setDiscoveryAnswers((current) => ({ ...current, [key]: value }));
+  };
+
+  const answerDiscoveryOther = (key, value) => {
+    setMissionBriefReady(false);
+    setDiscoveryOtherAnswers((current) => ({ ...current, [key]: value }));
+  };
 
   return (
     <div style={{
@@ -690,9 +942,9 @@ export default function Portfolio() {
           e.currentTarget.style.transform = "scale(1)";
           e.currentTarget.style.boxShadow = "0 4px 20px rgba(37, 211, 102, 0.4)";
         }}
-        title="Chat on WhatsApp"
+        title="Send WhatsApp signal"
       >
-        💬
+        🛰️
       </a>
 
       {/* Chatbot */}
@@ -988,19 +1240,23 @@ export default function Portfolio() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.5rem" }}>
             {services.map((s, i) => (
-              <div
+              <button
                 key={s.title}
+                onClick={() => setSelectedServiceIndex(i)}
                 className="card-hover"
                 style={{
                   ...fadeIn("services", i * 0.15),
-                  background: "rgba(123,47,190,0.07)",
-                  border: "1px solid rgba(123,47,190,0.2)",
+                  textAlign: "left",
+                  background: selectedServiceIndex === i ? "rgba(0,212,255,0.11)" : "rgba(123,47,190,0.07)",
+                  border: selectedServiceIndex === i ? "1px solid rgba(0,212,255,0.55)" : "1px solid rgba(123,47,190,0.2)",
                   borderRadius: "20px",
                   padding: "2rem",
                   backdropFilter: "blur(20px)",
-                  cursor: "default",
+                  cursor: "pointer",
                   position: "relative",
                   overflow: "hidden",
+                  color: "#E8F4FD",
+                  fontFamily: "'Space Grotesk', sans-serif",
                 }}
               >
                 <div style={{
@@ -1020,8 +1276,364 @@ export default function Portfolio() {
                   color: "#00D4FF", fontSize: "0.85rem", fontWeight: 600,
                   display: "inline-block",
                 }}>{s.price}</div>
-              </div>
+                <div style={{ color: "#B8C8D8", fontSize: "0.76rem", marginTop: "1rem", letterSpacing: "0.08em" }}>
+                  TAP TO VIEW AUTOMATION
+                </div>
+              </button>
             ))}
+          </div>
+
+          <div style={{
+            ...fadeIn("services", 0.35),
+            marginTop: "1.5rem",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))",
+            gap: "1.5rem",
+            background: "rgba(5,5,16,0.78)",
+            border: "1px solid rgba(0,212,255,0.24)",
+            borderRadius: "24px",
+            padding: "2rem",
+            position: "relative",
+            overflow: "hidden",
+          }}>
+            <div>
+              <div style={{ color: "#00D4FF", fontSize: "0.72rem", letterSpacing: "0.16em", marginBottom: "0.8rem", fontWeight: 700 }}>
+                LIVE AUTOMATION COCKPIT
+              </div>
+              <h3 style={{ fontFamily: "'Orbitron', monospace", fontSize: "1.35rem", marginBottom: "0.8rem" }}>
+                {selectedService.icon} {selectedService.demoTitle}
+              </h3>
+              <p style={{ color: "#B8C8D8", lineHeight: 1.75, marginBottom: "1.3rem" }}>
+                This is what the client experiences when {selectedService.title.toLowerCase()} become automated instead of manual.
+              </p>
+              <div style={{ display: "grid", gap: "0.75rem" }}>
+                {selectedService.automation.map((step, index) => (
+                  <div key={step} style={{ display: "grid", gridTemplateColumns: "38px 1fr", gap: "0.8rem", alignItems: "center" }}>
+                    <div style={{
+                      width: 38,
+                      height: 38,
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      background: "radial-gradient(circle at 35% 35%, #7B2FBE, #050510 72%)",
+                      boxShadow: "0 0 18px rgba(123,47,190,0.45)",
+                      color: "#E8F4FD",
+                      fontWeight: 800,
+                    }}>{index + 1}</div>
+                    <div style={{ color: "#E8F4FD", fontSize: "0.9rem" }}>{step}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div style={{
+              border: "1px solid rgba(255,255,255,0.10)",
+              borderRadius: "20px",
+              padding: "1.4rem",
+              background: "linear-gradient(135deg, rgba(123,47,190,0.12), rgba(0,212,255,0.06))",
+            }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.8rem", marginBottom: "1.2rem" }}>
+                {selectedService.demoMetrics.map(([label, value]) => (
+                  <div key={label} style={{
+                    background: "rgba(0,0,0,0.28)",
+                    border: "1px solid rgba(0,212,255,0.16)",
+                    borderRadius: "14px",
+                    padding: "0.9rem",
+                    minHeight: 86,
+                  }}>
+                    <div style={{ color: "#9BAAB8", fontSize: "0.7rem", marginBottom: 6 }}>{label}</div>
+                    <div style={{ color: "#00D4FF", fontFamily: "'Orbitron', monospace", fontSize: "1.05rem" }}>{value}</div>
+                  </div>
+                ))}
+              </div>
+              <div style={{
+                height: 160,
+                borderRadius: "18px",
+                border: "1px solid rgba(123,47,190,0.24)",
+                background: "radial-gradient(circle at 25% 40%, rgba(0,212,255,0.28), transparent 18%), radial-gradient(circle at 70% 55%, rgba(123,47,190,0.38), transparent 20%), #060614",
+                position: "relative",
+                overflow: "hidden",
+              }}>
+                {[0, 1, 2, 3].map((orbit) => (
+                  <div key={orbit} style={{
+                    position: "absolute",
+                    left: `${16 + orbit * 21}%`,
+                    top: `${28 + (orbit % 2) * 28}%`,
+                    width: 16,
+                    height: 16,
+                    borderRadius: "50%",
+                    background: orbit % 2 ? "#00D4FF" : "#7B2FBE",
+                    boxShadow: orbit % 2 ? "0 0 18px #00D4FF" : "0 0 18px #7B2FBE",
+                  }} />
+                ))}
+                <div style={{ position: "absolute", inset: "auto 16px 16px", color: "#B8C8D8", fontSize: "0.8rem" }}>
+                  Automated signals moving from customer to owner dashboard.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DIGITAL ORBIT PLANNER */}
+      <section
+        id="orbit-planner"
+        style={{ padding: "8rem 2rem", position: "relative", zIndex: 1, overflow: "hidden" }}
+      >
+        <div style={{
+          position: "absolute",
+          left: "50%",
+          top: "52%",
+          transform: "translate(-50%, -50%)",
+          width: 760,
+          height: 760,
+          borderRadius: "50%",
+          border: "1px solid rgba(0,212,255,0.12)",
+          pointerEvents: "none",
+          animation: "orbitSpin 90s linear infinite",
+        }} />
+        <div style={{
+          position: "absolute",
+          left: "50%",
+          top: "52%",
+          transform: "translate(-50%, -50%)",
+          width: 520,
+          height: 520,
+          borderRadius: "50%",
+          border: "1px solid rgba(123,47,190,0.18)",
+          pointerEvents: "none",
+          animation: "orbitSpin 55s linear infinite reverse",
+        }} />
+
+        <div style={{ maxWidth: 1160, margin: "0 auto", position: "relative" }}>
+          <div style={{ textAlign: "center", marginBottom: "4rem", ...fadeIn("orbit-planner", 0) }}>
+            <div style={{ color: "#00D4FF", fontSize: "0.8rem", letterSpacing: "0.2em", marginBottom: "1rem" }}>MISSION CONTROL</div>
+            <h2 style={{
+              fontFamily: "'Orbitron', monospace",
+              fontSize: "clamp(2rem, 4vw, 3.2rem)",
+              fontWeight: 900,
+              lineHeight: 1.08,
+            }}>
+              DIGITAL <span style={{
+                background: "linear-gradient(135deg, #7B2FBE, #00D4FF)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}>ORBIT PLANNER</span>
+            </h2>
+            <p style={{ color: "#B8C8D8", maxWidth: 700, margin: "1rem auto 0", lineHeight: 1.8 }}>
+              Pick a business planet, add feature moons, and show your client what their digital launch could look like before the first meeting.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))", gap: "1.5rem", alignItems: "stretch" }}>
+            <div style={{
+              ...fadeIn("orbit-planner", 0.1),
+              background: "rgba(5,5,16,0.74)",
+              border: "1px solid rgba(123,47,190,0.28)",
+              borderRadius: "24px",
+              padding: "1.4rem",
+              backdropFilter: "blur(20px)",
+            }}>
+              <div style={{ color: "#7B2FBE", fontSize: "0.72rem", letterSpacing: "0.16em", marginBottom: "1rem", fontWeight: 700 }}>
+                SELECT BUSINESS PLANET
+              </div>
+              <div style={{ display: "grid", gap: "0.8rem" }}>
+                {businessPlanets.map((planet) => {
+                  const isActive = selectedBusiness.id === planet.id;
+                  return (
+                    <button
+                      key={planet.id}
+                      onClick={() => setSelectedBusinessId(planet.id)}
+                      style={{
+                        width: "100%",
+                        minHeight: 74,
+                        display: "grid",
+                        gridTemplateColumns: "48px 1fr",
+                        gap: "0.9rem",
+                        alignItems: "center",
+                        textAlign: "left",
+                        background: isActive ? `${planet.color}1f` : "rgba(255,255,255,0.03)",
+                        border: `1px solid ${isActive ? planet.color : "rgba(255,255,255,0.10)"}`,
+                        borderRadius: "16px",
+                        color: "#E8F4FD",
+                        padding: "0.8rem",
+                        cursor: "pointer",
+                        boxShadow: isActive ? `0 0 28px ${planet.color}33` : "none",
+                        transition: "all 0.25s ease",
+                      }}
+                    >
+                      <span style={{
+                        width: 46,
+                        height: 46,
+                        borderRadius: "50%",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        background: `radial-gradient(circle at 35% 30%, ${planet.color}, rgba(5,5,16,0.85) 70%)`,
+                        boxShadow: `0 0 20px ${planet.color}66`,
+                        fontSize: "1.35rem",
+                      }}>{planet.icon}</span>
+                      <span>
+                        <span style={{ display: "block", fontFamily: "'Orbitron', monospace", fontSize: "0.78rem", letterSpacing: "0.05em" }}>{planet.name}</span>
+                        <span style={{ display: "block", color: "#9BAAB8", fontSize: "0.78rem", marginTop: 4 }}>{planet.business}</span>
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div style={{
+              ...fadeIn("orbit-planner", 0.2),
+              background: "linear-gradient(135deg, rgba(123,47,190,0.14), rgba(0,212,255,0.08))",
+              border: `1px solid ${selectedBusiness.color}55`,
+              borderRadius: "28px",
+              padding: "2rem",
+              backdropFilter: "blur(22px)",
+              position: "relative",
+              overflow: "hidden",
+            }}>
+              <div style={{
+                position: "absolute",
+                right: "-70px",
+                top: "-70px",
+                width: 240,
+                height: 240,
+                borderRadius: "50%",
+                background: `radial-gradient(circle at 35% 35%, ${selectedBusiness.color}77, transparent 68%)`,
+                pointerEvents: "none",
+              }} />
+
+              <div style={{ display: "grid", gridTemplateColumns: "96px 1fr", gap: "1.4rem", alignItems: "center", position: "relative" }}>
+                <div style={{
+                  width: 96,
+                  height: 96,
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  background: `radial-gradient(circle at 34% 30%, ${selectedBusiness.color}, #050510 72%)`,
+                  boxShadow: `0 0 34px ${selectedBusiness.color}88, 0 0 90px ${selectedBusiness.color}22`,
+                  fontSize: "2.4rem",
+                }}>{selectedBusiness.icon}</div>
+                <div>
+                  <div style={{ color: selectedBusiness.color, fontSize: "0.78rem", letterSpacing: "0.18em", marginBottom: "0.5rem", fontWeight: 700 }}>ACTIVE ORBIT</div>
+                  <h3 style={{ fontFamily: "'Orbitron', monospace", fontSize: "1.35rem", marginBottom: "0.55rem" }}>{selectedBusiness.business}</h3>
+                  <p style={{ color: "#B8C8D8", lineHeight: 1.65 }}>{selectedBusiness.mission}</p>
+                </div>
+              </div>
+
+              <div style={{ marginTop: "2rem" }}>
+                <div style={{ color: "#7B2FBE", fontSize: "0.72rem", letterSpacing: "0.16em", marginBottom: "1rem", fontWeight: 700 }}>
+                  ADD FEATURE MOONS
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))", gap: "0.85rem" }}>
+                  {orbitFeatures.map((feature) => {
+                    const isSelected = selectedFeatureIds.includes(feature.id);
+                    return (
+                      <button
+                        key={feature.id}
+                        onClick={() => toggleFeature(feature.id)}
+                        style={{
+                          minHeight: 104,
+                          textAlign: "left",
+                          background: isSelected ? "rgba(0,212,255,0.12)" : "rgba(255,255,255,0.035)",
+                          border: isSelected ? "1px solid rgba(0,212,255,0.55)" : "1px solid rgba(255,255,255,0.10)",
+                          borderRadius: "16px",
+                          color: "#E8F4FD",
+                          padding: "1rem",
+                          cursor: "pointer",
+                          transition: "all 0.25s ease",
+                        }}
+                      >
+                        <span style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.55rem" }}>
+                          <span style={{ fontSize: "1.35rem" }}>{feature.icon}</span>
+                          <span style={{ fontWeight: 800, fontSize: "0.86rem" }}>{feature.name}</span>
+                        </span>
+                        <span style={{ display: "block", color: "#9BAAB8", fontSize: "0.78rem", lineHeight: 1.45 }}>{feature.desc}</span>
+                        <span style={{ display: "block", color: "#00D4FF", fontSize: "0.76rem", marginTop: "0.55rem" }}>
+                          + {formatPrice(feature.price)} / +{feature.weeks}w
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))", gap: "1.5rem", marginTop: "1.5rem" }}>
+            <div style={{
+              ...fadeIn("orbit-planner", 0.25),
+              background: "rgba(5,5,16,0.78)",
+              border: "1px solid rgba(0,212,255,0.24)",
+              borderRadius: "24px",
+              padding: "2rem",
+            }}>
+              <div style={{ color: "#00D4FF", fontSize: "0.72rem", letterSpacing: "0.16em", marginBottom: "1.3rem", fontWeight: 700 }}>
+                LIVE LAUNCH ESTIMATE
+              </div>
+              <div style={{ display: "grid", gap: "1rem" }}>
+                <div>
+                  <div style={{ color: "#9BAAB8", fontSize: "0.78rem", marginBottom: 4 }}>Estimated Investment</div>
+                  <div style={{ fontFamily: "'Orbitron', monospace", fontSize: "2rem", color: "#E8F4FD" }}>{formatPrice(launchCost)}</div>
+                </div>
+                <div>
+                  <div style={{ color: "#9BAAB8", fontSize: "0.78rem", marginBottom: 4 }}>Launch Window</div>
+                  <div style={{ fontFamily: "'Orbitron', monospace", fontSize: "1.55rem", color: selectedBusiness.color }}>{launchWeeks}-{launchWeeks + 1} weeks</div>
+                </div>
+                <div style={{
+                  marginTop: "0.5rem",
+                  borderTop: "1px solid rgba(255,255,255,0.10)",
+                  paddingTop: "1rem",
+                  color: "#B8C8D8",
+                  lineHeight: 1.7,
+                  fontSize: "0.9rem",
+                }}>
+                  {selectedBusiness.result}
+                </div>
+              </div>
+            </div>
+
+            <div style={{
+              ...fadeIn("orbit-planner", 0.3),
+              background: "rgba(123,47,190,0.07)",
+              border: "1px solid rgba(123,47,190,0.24)",
+              borderRadius: "24px",
+              padding: "2rem",
+            }}>
+              <div style={{ color: "#7B2FBE", fontSize: "0.72rem", letterSpacing: "0.16em", marginBottom: "1.2rem", fontWeight: 700 }}>
+                LOCAL MARKET BEFORE / AFTER
+              </div>
+              <div style={{ display: "grid", gap: "0.85rem" }}>
+                {marketShifts.map((shift) => (
+                  <div key={shift.before} style={{
+                    display: "grid",
+                    gridTemplateColumns: "1fr 44px 1fr",
+                    gap: "0.9rem",
+                    alignItems: "center",
+                    background: "rgba(255,255,255,0.035)",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                    borderRadius: "16px",
+                    padding: "0.9rem",
+                  }}>
+                    <div style={{ color: "#9BAAB8", fontSize: "0.84rem", lineHeight: 1.45 }}>{shift.before}</div>
+                    <div style={{
+                      width: 44,
+                      height: 44,
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      background: "radial-gradient(circle at 35% 35%, #00D4FF, #050510 72%)",
+                      boxShadow: "0 0 20px rgba(0,212,255,0.45)",
+                      fontSize: "1.2rem",
+                    }}>{shift.icon}</div>
+                    <div style={{ color: "#E8F4FD", fontSize: "0.84rem", lineHeight: 1.45 }}>{shift.after}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1049,18 +1661,23 @@ export default function Portfolio() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
             {projects.map((p, i) => (
-              <div
+              <button
                 key={p.name}
+                onClick={() => setSelectedProjectIndex(i)}
                 className="card-hover"
                 style={{
                   ...fadeIn("projects", i * 0.15),
-                  background: "rgba(5,5,16,0.7)",
-                  border: `1px solid ${p.color}33`,
+                  textAlign: "left",
+                  background: selectedProjectIndex === i ? `${p.color}18` : "rgba(5,5,16,0.7)",
+                  border: `1px solid ${selectedProjectIndex === i ? p.color : `${p.color}33`}`,
                   borderRadius: "20px",
                   padding: "2rem",
                   backdropFilter: "blur(20px)",
                   position: "relative",
                   overflow: "hidden",
+                  color: "#E8F4FD",
+                  cursor: "pointer",
+                  fontFamily: "'Space Grotesk', sans-serif",
                 }}
               >
                 <div style={{
@@ -1090,8 +1707,125 @@ export default function Portfolio() {
                     }}>{tech}</span>
                   ))}
                 </div>
-              </div>
+                <div style={{ color: p.color, fontSize: "0.76rem", marginTop: "1.2rem", letterSpacing: "0.08em", fontWeight: 700 }}>
+                  OPEN DASHBOARD PREVIEW
+                </div>
+              </button>
             ))}
+          </div>
+
+          <div style={{
+            ...fadeIn("projects", 0.35),
+            marginTop: "1.5rem",
+            background: "rgba(5,5,16,0.82)",
+            border: `1px solid ${selectedProject.color}55`,
+            borderRadius: "28px",
+            padding: "2rem",
+            position: "relative",
+            overflow: "hidden",
+          }}>
+            <div style={{
+              position: "absolute",
+              right: "-90px",
+              top: "-90px",
+              width: 260,
+              height: 260,
+              borderRadius: "50%",
+              background: `radial-gradient(circle, ${selectedProject.color}44, transparent 68%)`,
+            }} />
+            <div style={{ position: "relative", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))", gap: "1.5rem" }}>
+              <div>
+                <div style={{ color: selectedProject.color, fontSize: "0.72rem", letterSpacing: "0.16em", marginBottom: "0.8rem", fontWeight: 700 }}>
+                  LIVE PROJECT DASHBOARD
+                </div>
+                <h3 style={{ fontFamily: "'Orbitron', monospace", fontSize: "1.45rem", marginBottom: "0.8rem" }}>
+                  {selectedProject.icon} {selectedProject.dashboard.title}
+                </h3>
+                <p style={{ color: "#B8C8D8", lineHeight: 1.75, marginBottom: "1.3rem" }}>{selectedProject.dashboard.trust}</p>
+                <div style={{ display: "grid", gap: "0.8rem" }}>
+                  {selectedProject.dashboard.flow.map((step, index) => (
+                    <div key={step} style={{
+                      display: "grid",
+                      gridTemplateColumns: "42px 1fr",
+                      gap: "0.85rem",
+                      alignItems: "center",
+                      background: "rgba(255,255,255,0.035)",
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      borderRadius: "14px",
+                      padding: "0.75rem",
+                    }}>
+                      <div style={{
+                        width: 42,
+                        height: 42,
+                        borderRadius: "50%",
+                        background: `radial-gradient(circle at 35% 35%, ${selectedProject.color}, #050510 72%)`,
+                        boxShadow: `0 0 18px ${selectedProject.color}66`,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontWeight: 800,
+                      }}>{index + 1}</div>
+                      <div style={{ color: "#E8F4FD", fontSize: "0.9rem" }}>{step}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div style={{
+                background: "linear-gradient(135deg, rgba(0,212,255,0.08), rgba(123,47,190,0.12))",
+                border: "1px solid rgba(255,255,255,0.10)",
+                borderRadius: "22px",
+                padding: "1.3rem",
+              }}>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.8rem", marginBottom: "1rem" }}>
+                  {selectedProject.dashboard.metrics.map(([label, value]) => (
+                    <div key={label} style={{
+                      background: "rgba(0,0,0,0.32)",
+                      border: `1px solid ${selectedProject.color}33`,
+                      borderRadius: "14px",
+                      padding: "0.85rem",
+                      minHeight: 86,
+                    }}>
+                      <div style={{ color: "#9BAAB8", fontSize: "0.7rem", marginBottom: 7 }}>{label}</div>
+                      <div style={{ color: selectedProject.color, fontFamily: "'Orbitron', monospace", fontSize: "1.02rem" }}>{value}</div>
+                    </div>
+                  ))}
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "1.2fr 0.8fr", gap: "0.8rem" }}>
+                  <div style={{
+                    height: 180,
+                    borderRadius: "18px",
+                    border: `1px solid ${selectedProject.color}33`,
+                    background: `linear-gradient(180deg, ${selectedProject.color}22, rgba(5,5,16,0.8))`,
+                    display: "flex",
+                    alignItems: "end",
+                    gap: "0.55rem",
+                    padding: "1rem",
+                  }}>
+                    {[44, 62, 48, 76, 68, 88].map((height, index) => (
+                      <div key={index} style={{
+                        flex: 1,
+                        height: `${height}%`,
+                        borderRadius: "10px 10px 4px 4px",
+                        background: `linear-gradient(180deg, ${selectedProject.color}, rgba(0,212,255,0.42))`,
+                        boxShadow: `0 0 16px ${selectedProject.color}44`,
+                      }} />
+                    ))}
+                  </div>
+                  <div style={{ display: "grid", gap: "0.8rem" }}>
+                    {["Live alerts", "Owner access", "Mobile ready"].map((item) => (
+                      <div key={item} style={{
+                        borderRadius: "14px",
+                        border: "1px solid rgba(255,255,255,0.09)",
+                        background: "rgba(255,255,255,0.035)",
+                        padding: "0.85rem",
+                        color: "#B8C8D8",
+                        fontSize: "0.82rem",
+                      }}>{item}</div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1210,12 +1944,12 @@ export default function Portfolio() {
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "2rem" }}>
               {[
-                { icon: "🎯", title: "Business-First Thinking", desc: "I don't just write code. I understand your business goals and build accordingly." },
-                { icon: "⚡", title: "Fast Turnaround", desc: "Most projects delivered in 2–4 weeks. No endless delays." },
-                { icon: "🛡️", title: "Reliable & Secure", desc: "Secure login, proper API design, and stable hosting guidance." },
-                { icon: "🤝", title: "Ongoing Support", desc: "Post-launch support and updates so you're never left stranded." },
-                { icon: "💰", title: "Local-Friendly Pricing", desc: "Competitive rates built for Indian small businesses, not Silicon Valley budgets." },
-                { icon: "📞", title: "Direct Communication", desc: "You talk to me directly, not a team of account managers." },
+                { icon: "☀️", title: "Business-First Thinking", desc: "I don't just write code. I understand your business goals and build accordingly." },
+                { icon: "☄️", title: "Fast Turnaround", desc: "Most projects delivered in 2–4 weeks. No endless delays." },
+                { icon: "🪐", title: "Reliable & Secure", desc: "Secure login, proper API design, and stable hosting guidance." },
+                { icon: "🌙", title: "Ongoing Support", desc: "Post-launch support and updates so you're never left stranded." },
+                { icon: "🌕", title: "Local-Friendly Pricing", desc: "Competitive rates built for Indian small businesses, not Silicon Valley budgets." },
+                { icon: "🛰️", title: "Direct Communication", desc: "You talk to me directly, not a team of account managers." },
               ].map((item) => (
                 <div key={item.title}>
                   <div style={{ fontSize: "1.8rem", marginBottom: "0.8rem" }}>{item.icon}</div>
@@ -1223,6 +1957,254 @@ export default function Portfolio() {
                   <p style={{ color: "#9BAAB8", fontSize: "0.88rem", lineHeight: 1.7 }}>{item.desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DEVELOPER DISCOVERY CONSOLE */}
+      <section
+        id="discovery"
+        style={{ padding: "7rem 2rem", position: "relative", zIndex: 1 }}
+      >
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "3.5rem", ...fadeIn("discovery", 0) }}>
+            <div style={{ color: "#00D4FF", fontSize: "0.8rem", letterSpacing: "0.2em", marginBottom: "1rem" }}>DEVELOPER DISCOVERY SIGNAL</div>
+            <h2 style={{
+              fontFamily: "'Orbitron', monospace",
+              fontSize: "clamp(2rem, 4vw, 3rem)",
+              fontWeight: 900,
+            }}>
+              TELL ME YOUR <span style={{
+                background: "linear-gradient(135deg, #7B2FBE, #00D4FF)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}>BUSINESS ORBIT</span>
+            </h2>
+            <p style={{ color: "#B8C8D8", maxWidth: 680, margin: "1rem auto 0", lineHeight: 1.75 }}>
+              This mini consultation asks the same questions I ask before planning a real automation system.
+            </p>
+          </div>
+
+          <div style={{
+            ...fadeIn("discovery", 0.15),
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 330px), 1fr))",
+            gap: "1.5rem",
+          }}>
+            <div style={{
+              background: "rgba(5,5,16,0.78)",
+              border: "1px solid rgba(123,47,190,0.26)",
+              borderRadius: "26px",
+              padding: "2rem",
+            }}>
+              <div style={{ display: "grid", gap: "1.3rem" }}>
+                {discoveryQuestions.map((item, index) => (
+                  <div key={item.key}>
+                    <div style={{ color: "#7B2FBE", fontSize: "0.72rem", letterSpacing: "0.14em", marginBottom: "0.55rem", fontWeight: 700 }}>
+                      ORBIT QUESTION {index + 1}
+                    </div>
+                    <div style={{ color: "#E8F4FD", fontWeight: 700, marginBottom: "0.7rem" }}>{item.question}</div>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: "0.55rem" }}>
+                      {item.options.map((option) => {
+                        const active = discoveryAnswers[item.key] === option;
+                        return (
+                          <button
+                            key={option}
+                            onClick={() => answerDiscovery(item.key, option)}
+                            style={{
+                              background: active ? "linear-gradient(135deg, #7B2FBE, #00D4FF)" : "rgba(255,255,255,0.04)",
+                              border: active ? "none" : "1px solid rgba(255,255,255,0.10)",
+                              borderRadius: "18px",
+                              color: "#E8F4FD",
+                              padding: "0.5rem 0.8rem",
+                              cursor: "pointer",
+                              fontFamily: "'Space Grotesk', sans-serif",
+                              fontSize: "0.8rem",
+                            }}
+                          >
+                            {option}
+                          </button>
+                        );
+                      })}
+                    </div>
+                    {discoveryAnswers[item.key] === "Other" && (
+                      <input
+                        type="text"
+                        value={discoveryOtherAnswers[item.key] || ""}
+                        onChange={(e) => answerDiscoveryOther(item.key, e.target.value)}
+                        placeholder="Type your own answer..."
+                        style={{
+                          width: "100%",
+                          marginTop: "0.75rem",
+                          background: "rgba(0,0,0,0.35)",
+                          border: "1px solid rgba(0,212,255,0.28)",
+                          borderRadius: "14px",
+                          color: "#E8F4FD",
+                          padding: "0.75rem 0.9rem",
+                          outline: "none",
+                          fontFamily: "'Space Grotesk', sans-serif",
+                          fontSize: "0.9rem",
+                        }}
+                      />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div style={{
+              background: "linear-gradient(135deg, rgba(123,47,190,0.14), rgba(0,212,255,0.08))",
+              border: "1px solid rgba(0,212,255,0.28)",
+              borderRadius: "26px",
+              padding: "2rem",
+              position: "relative",
+              overflow: "hidden",
+            }}>
+              <div style={{
+                position: "absolute",
+                right: "-80px",
+                top: "-80px",
+                width: 230,
+                height: 230,
+                borderRadius: "50%",
+                background: "radial-gradient(circle, rgba(0,212,255,0.25), transparent 68%)",
+              }} />
+              <div style={{ position: "relative" }}>
+                <div style={{ color: "#00D4FF", fontSize: "0.72rem", letterSpacing: "0.16em", marginBottom: "1rem", fontWeight: 700 }}>
+                  GENERATED PROJECT BRIEF
+                </div>
+                <div style={{
+                  width: 112,
+                  height: 112,
+                  borderRadius: "50%",
+                  marginBottom: "1.3rem",
+                  background: `conic-gradient(#00D4FF ${discoveryScore}%, rgba(255,255,255,0.08) 0)`,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "0 0 36px rgba(0,212,255,0.24)",
+                }}>
+                  <div style={{
+                    width: 82,
+                    height: 82,
+                    borderRadius: "50%",
+                    background: "#050510",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontFamily: "'Orbitron', monospace",
+                    color: "#00D4FF",
+                  }}>{discoveryScore}%</div>
+                </div>
+                <h3 style={{ fontFamily: "'Orbitron', monospace", fontSize: "1.3rem", marginBottom: "1rem" }}>
+                  {discoveryAnswers.businessType} Automation Mission
+                </h3>
+                <div style={{ display: "grid", gap: "0.85rem", marginBottom: "1.3rem" }}>
+                  {[
+                    ["Main asteroid", discoveryAnswers.mainProblem],
+                    ["First launch", discoveryAnswers.priority],
+                    ["Timeline signal", discoveryAnswers.timeline],
+                  ].map(([label, value]) => (
+                    <div key={label} style={{
+                      background: "rgba(0,0,0,0.25)",
+                      border: "1px solid rgba(255,255,255,0.10)",
+                      borderRadius: "14px",
+                      padding: "0.9rem",
+                    }}>
+                      <div style={{ color: "#9BAAB8", fontSize: "0.72rem", marginBottom: 4 }}>{label}</div>
+                      <div style={{ color: "#E8F4FD", fontWeight: 700 }}>{value}</div>
+                    </div>
+                  ))}
+                </div>
+                <p style={{ color: "#B8C8D8", lineHeight: 1.75, marginBottom: "1.3rem" }}>
+                  Based on this signal, I would start with a focused MVP, connect the highest-impact automation first, then expand into dashboard and analytics once data starts flowing.
+                </p>
+                <button
+                  onClick={() => setMissionBriefReady(true)}
+                  style={{
+                    background: "linear-gradient(135deg, #7B2FBE, #00D4FF)",
+                    border: "none",
+                    borderRadius: "24px",
+                    color: "#fff",
+                    padding: "0.85rem 1.4rem",
+                    cursor: "pointer",
+                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontWeight: 800,
+                    letterSpacing: "0.06em",
+                  }}
+                >
+                  GENERATE MISSION PACKET
+                </button>
+                {missionBriefReady && (
+                  <div style={{
+                    marginTop: "1.3rem",
+                    background: "rgba(0,255,136,0.08)",
+                    border: "1px solid rgba(0,255,136,0.28)",
+                    borderRadius: "18px",
+                    padding: "1.2rem",
+                  }}>
+                    <div style={{ color: "#00FF88", fontSize: "0.72rem", letterSpacing: "0.16em", marginBottom: "0.8rem", fontWeight: 800 }}>
+                      MISSION PACKET READY
+                    </div>
+                    <div style={{
+                      background: "rgba(0,0,0,0.28)",
+                      border: "1px solid rgba(255,255,255,0.10)",
+                      borderRadius: "14px",
+                      padding: "1rem",
+                      color: "#E8F4FD",
+                      fontSize: "0.86rem",
+                      lineHeight: 1.65,
+                      marginBottom: "1rem",
+                    }}>
+                      {discoveryAnswers.businessType} needs help with {discoveryAnswers.mainProblem.toLowerCase()}. First launch should focus on {discoveryAnswers.priority.toLowerCase()}, with a target timeline of {discoveryAnswers.timeline.toLowerCase()}.
+                    </div>
+                    <div style={{ display: "grid", gap: "0.65rem", marginBottom: "1rem" }}>
+                      {[
+                        `Phase 1: Build ${discoveryAnswers.priority}`,
+                        `Phase 2: Add dashboard visibility for ${discoveryAnswers.mainProblem.toLowerCase()}`,
+                        "Phase 3: Connect analytics nebula and follow-up signals",
+                      ].map((step) => (
+                        <div key={step} style={{ color: "#B8C8D8", fontSize: "0.84rem" }}>🛰️ {step}</div>
+                      ))}
+                    </div>
+                    <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+                      <a
+                        href={`https://wa.me/917667151925?text=${encodeURIComponent(`Hi ParaTech, my mission brief: ${discoveryAnswers.businessType} business, problem: ${discoveryAnswers.mainProblem}, first launch: ${discoveryAnswers.priority}, timeline: ${discoveryAnswers.timeline}.`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          background: "#25D366",
+                          borderRadius: "20px",
+                          color: "#fff",
+                          padding: "0.65rem 1rem",
+                          textDecoration: "none",
+                          fontWeight: 800,
+                          fontSize: "0.82rem",
+                        }}
+                      >
+                        SEND VIA WHATSAPP
+                      </a>
+                      <button
+                        onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                        style={{
+                          background: "transparent",
+                          border: "1px solid rgba(0,212,255,0.45)",
+                          borderRadius: "20px",
+                          color: "#00D4FF",
+                          padding: "0.65rem 1rem",
+                          cursor: "pointer",
+                          fontFamily: "'Space Grotesk', sans-serif",
+                          fontWeight: 800,
+                          fontSize: "0.82rem",
+                        }}
+                      >
+                        OPEN CONTACT DOCK
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
