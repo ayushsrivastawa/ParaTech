@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: my-portfolio
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: VITE_EMAILJS_PUBLIC_KEY
+        sync: false
+      - key: VITE_EMAILJS_SERVICE_ID
+        sync: false
+      - key: VITE_EMAILJS_TEMPLATE_ID
+        sync: false
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
